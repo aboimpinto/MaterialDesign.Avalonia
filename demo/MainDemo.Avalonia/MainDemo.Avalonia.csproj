@@ -15,4 +15,7 @@
     <PackageReference Include="Avalonia" Version="*" />
     <PackageReference Include="Avalonia.Desktop" Version="*" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\source\MaterialDesign.PackIcon\MaterialDesign.PackIcon.csproj" />
+  </ItemGroup>
 </Project>

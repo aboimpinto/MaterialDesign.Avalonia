@@ -1,0 +1,45 @@
+<Styles 
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:MaterialDesign.PackIcon;assembly=MaterialDesign.PackIcon">
+
+    <!-- <Styles.Resources>
+        <local:GeometryConveter x:Key="geometryConveter" />
+    </Styles.Resources> -->
+
+    <Style Selector="local|PackIcon">
+        <Setter Property="Height" Value="16" />
+        <Setter Property="Width" Value="16" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <!-- <Setter Property="IsTabStop" Value="False" /> -->
+        <!-- <Setter Property="FlowDirection" Value="LeftToRight" /> -->
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border Background="{TemplateBinding Background}" 
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <Viewbox>
+                            <!-- <Canvas Width="24" Height="24">
+                                <Path 
+                                    Data="{Binding Data, RelativeSource={RelativeSource TemplatedParent}}"                                   
+                                    Fill="{TemplateBinding Foreground}" />
+                            </Canvas> -->
+
+                            <Path
+                                Data="{Binding Data, RelativeSource={RelativeSource TemplatedParent}}"
+                                Fill="{TemplateBinding Foreground}" />
+
+                        </Viewbox>
+
+                        <!--
+                        <TextBlock Text="{Binding Data, RelativeSource={RelativeSource TemplatedParent}}" />
+                        -->
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</Styles>
