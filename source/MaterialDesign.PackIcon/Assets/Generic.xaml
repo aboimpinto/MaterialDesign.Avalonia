@@ -4,7 +4,7 @@
     xmlns:local="clr-namespace:MaterialDesign.PackIcon;assembly=MaterialDesign.PackIcon">
 
     <Styles.Resources>
-        <localGeometryConveter x:Key="geometryConveter" />
+        <local:GeometryConverter x:Key="geometryConveter" />
     </Styles.Resources>
 
     <Style Selector="local|PackIcon">
