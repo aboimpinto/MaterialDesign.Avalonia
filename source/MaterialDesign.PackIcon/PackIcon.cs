@@ -12,12 +12,7 @@ namespace MaterialDesign.PackIcon
 
         public static readonly AvaloniaProperty KindProperty = 
             AvaloniaProperty.Register<PackIcon, PackIconKind>(
-                nameof(Kind),
-                notifying: KindPropertyChangedCallback);
-
-        private static void KindPropertyChangedCallback(IAvaloniaObject arg1, bool arg2)
-        {
-        }
+                nameof(Kind));
 
         public PackIconKind Kind
         {

@@ -19,15 +19,15 @@
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">
                         <Viewbox>
-                            <!-- <Canvas Width="24" Height="24">
+                            <Canvas Width="24" Height="24">
                                 <Path 
-                                    Data="{Binding Data, RelativeSource={RelativeSource TemplatedParent}}"                                   
+                                    Data="{Binding Data, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource geometryConveter}}"                                   
                                     Fill="{TemplateBinding Foreground}" />
-                            </Canvas> -->
+                            </Canvas>
 
-                            <Path
-                                Data="{Binding Data, RelativeSource={RelativeSource TemplatedParent}}"
-                                Fill="{TemplateBinding Foreground}" />
+                            <!-- <Path
+                                Data="{Binding Data, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource geometryConveter}}"
+                                Fill="{TemplateBinding Foreground}" /> -->
 
                         </Viewbox>
 

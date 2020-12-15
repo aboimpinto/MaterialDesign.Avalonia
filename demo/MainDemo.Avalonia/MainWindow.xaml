@@ -22,9 +22,8 @@
         </Grid.ColumnDefinitions>
 
         <TextBlock Grid.Row="0" Grid.Column="1" Text="this is a text in MainWindow.XAML" />
-        <material:PackIcon Grid.Row="1" Grid.Column="1" Kind="AccountArrowLeft" />
-
-        <TextBlock Grid.Row="1" Grid.Column="1" Text="-- XXX --" />
+        
+        <material:PackIcon Grid.Row="1" Grid.Column="1" Kind="MonitorDashboard" Height="128" Width="128" />
     </Grid>
     
 </Window>
