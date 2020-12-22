@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainDemo.Avalonia", "demo\M
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "source", "source", "{2A5CA40F-277A-42FB-9342-AC2924D951FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaterialDesign.PackIcon", "source\MaterialDesign.PackIcon\MaterialDesign.PackIcon.csproj", "{A9E16F1F-9698-419C-90BC-29E55B943928}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaterialDesign.Avalonia.PackIcon", "source\MaterialDesign.Avalonia.PackIcon\MaterialDesign.Avalonia.PackIcon.csproj", "{A9E16F1F-9698-419C-90BC-29E55B943928}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

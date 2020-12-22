@@ -1,9 +1,8 @@
-﻿namespace MaterialDesign.PackIcon
+﻿namespace MaterialDesign.Avalonia.PackIcon
 {
     /// ******************************************
     /// Check PackIconKind file in MaterialDesignThemes.Wpf
     /// ******************************************
-    
     public enum PackIconKind
     {
         AbjadArabic,

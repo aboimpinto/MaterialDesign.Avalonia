@@ -2,8 +2,9 @@ using System;
 using System.Collections.Generic;
 using Avalonia;
 using Avalonia.Controls.Primitives;
+using MaterialDesign.Avalonia.PackIcon;
 
-namespace MaterialDesign.PackIcon
+namespace MaterialDesign.Avalonia.PackIcon
 {
     public class PackIcon : TemplatedControl
     {

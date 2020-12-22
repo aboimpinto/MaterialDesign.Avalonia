@@ -1,7 +1,7 @@
 <Styles 
     xmlns="https://github.com/avaloniaui"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="clr-namespace:MaterialDesign.PackIcon;assembly=MaterialDesign.PackIcon">
+    xmlns:local="clr-namespace:MaterialDesign.Avalonia.PackIcon;assembly=MaterialDesign.Avalonia.PackIcon">
 
     <Styles.Resources>
         <local:GeometryConverter x:Key="geometryConveter" />
@@ -24,16 +24,7 @@
                                     Data="{Binding Data, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource geometryConveter}}"                                   
                                     Fill="{TemplateBinding Foreground}" />
                             </Canvas>
-
-                            <!-- <Path
-                                Data="{Binding Data, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource geometryConveter}}"
-                                Fill="{TemplateBinding Foreground}" /> -->
-
                         </Viewbox>
-
-                        <!--
-                        <TextBlock Text="{Binding Data, RelativeSource={RelativeSource TemplatedParent}}" />
-                        -->
                     </Border>
                 </ControlTemplate>
             </Setter.Value>

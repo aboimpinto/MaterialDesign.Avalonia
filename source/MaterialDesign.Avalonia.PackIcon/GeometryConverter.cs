@@ -3,7 +3,7 @@ using System.Globalization;
 using Avalonia.Data.Converters;
 using Avalonia.Media;
 
-namespace MaterialDesign.PackIcon
+namespace MaterialDesign.Avalonia.PackIcon
 {
     public class GeometryConverter : IValueConverter
     {
