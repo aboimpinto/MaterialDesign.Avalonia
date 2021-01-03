@@ -21,7 +21,7 @@ jobs:
       run: dotnet pack -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/AboimPinto/MaterialDesign.Avalonia/releases/tag/${{ github.event.release.tag_name }}"
 
     - name: Archive NuGet Package
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v2
       with:
         name: MaterialDesign.Avalonia.PackIcon
-        path: ./source/MaterialDesign.Avalonia.PackIcon/bin/Release/MaterialDesign.Avalonia.PackIcon.${{ github.event.release.tag_name }}.nupkg
+        path: source/MaterialDesign.Avalonia.PackIcon/bin/Release/MaterialDesign.Avalonia.PackIcon.${{ github.event.release.tag_name }}.nupkg
