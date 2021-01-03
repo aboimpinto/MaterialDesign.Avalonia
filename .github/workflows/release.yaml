@@ -24,4 +24,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: MaterialDesign.Avalonia.PackIcon
-        path: source/MaterialDesign.Avalonia.PackIcon/bin/Release/MaterialDesign.Avalonia.PackIcon.${{ github.event.release.tag_name }}.nupkg
+        path: ./source/MaterialDesign.Avalonia.PackIcon/bin/Release/MaterialDesign.Avalonia.PackIcon.${{ github.event.release.tag_name }}.nupkg
