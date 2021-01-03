@@ -27,4 +27,4 @@ jobs:
         path: ./source/MaterialDesign.Avalonia.PackIcon/bin/Release/MaterialDesign.Avalonia.PackIcon.${{ github.event.release.tag_name }}.nupkg
 
     - name: Publish Nuget Package
-      run: dotnet nuget push **/*.nupkg --api-key ${{ secrets.MATERIALDESIGN_AVALONIA_PACKICON_KEY }} --source https://api.nuget.org/v3/index.json --no-symbols true
+      run: dotnet nuget push MaterialDesign.Avalonia.PackIcon.${{ github.event.release.tag_name }}.nupkg --api-key ${{ secrets.MATERIALDESIGN_AVALONIA_PACKICON_KEY }} --source https://api.nuget.org/v3/index.json --no-symbols true
