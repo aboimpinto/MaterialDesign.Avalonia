@@ -20,11 +20,5 @@ jobs:
     - name: Create NuGet Package
       run: dotnet pack -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/AboimPinto/MaterialDesign.Avalonia/releases/tag/${{ github.event.release.tag_name }}"
 
-    - name: Archive NuGet Package
-      uses: actions/upload-artifact@v2
-      with:
-        name: MaterialDesign.Avalonia.PackIcon
-        path: ./source/MaterialDesign.Avalonia.PackIcon/bin/Release/MaterialDesign.Avalonia.PackIcon.${{ github.event.release.tag_name }}.nupkg
-
     - name: Publish Nuget Package
-      run: dotnet nuget push ./source/MaterialDesign.Avalonia.PackIcon/bin/Release/MaterialDesign.Avalonia.PackIcon.${{ github.event.release.tag_name }}.nupkg --api-key ${{ secrets.MATERIALDESIGN_AVALONIA_PACKICON_KEY }} --source https://api.nuget.org/v3/index.json --no-symbols true
+      run: dotnet nuget push /home/runner/work/MaterialDesign.Avalonia/MaterialDesign.Avalonia/source/MaterialDesign.Avalonia.PackIcon/bin/Release/MaterialDesign.Avalonia.PackIcon.${{ github.event.release.tag_name }}.nupkg --api-key ${{ secrets.MATERIALDESIGN_AVALONIA_PACKICON_KEY }} --source https://api.nuget.org/v3/index.json --no-symbols true
