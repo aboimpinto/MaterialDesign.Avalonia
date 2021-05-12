@@ -47,19 +47,19 @@ namespace MaterialDesign.Avalonia.PackIcon
             packIcon.UpdateData();
         }
 
-        // protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
-        // {
-        //     base.OnApplyTemplate(e);
-        //     this.UpdateData();
-        // }
+        protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
+        {
+            base.OnApplyTemplate(e);
+            this.UpdateData();
+        }
 
         // TODO [AboimPinto]:  Can the OnTemplateApplied be replaced with OnApplyTemplate??? Need Investigation!!!
 
-        protected override void OnTemplateApplied(TemplateAppliedEventArgs e)
-        {
-            base.OnTemplateApplied(e);
-            this.UpdateData();
-        }
+        // protected override void OnTemplateApplied(TemplateAppliedEventArgs e)
+        // {
+        //     base.OnTemplateApplied(e);
+        //     this.UpdateData();
+        // }
 
         private void UpdateData()
         {
