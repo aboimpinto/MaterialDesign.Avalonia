@@ -1,8 +1,5 @@
-﻿using System;
-using Avalonia;
-using Avalonia.Controls;
-using Avalonia.Controls.ApplicationLifetimes;
-using Avalonia.Logging.Serilog;
+﻿using Avalonia;
+using Avalonia.ReactiveUI;
 
 namespace MainDemo.Avalonia
 {
@@ -18,6 +15,7 @@ namespace MainDemo.Avalonia
         public static AppBuilder BuildAvaloniaApp()
             => AppBuilder.Configure<App>()
                 .UsePlatformDetect()
-                .LogToDebug();
+                .LogToTrace()
+                .UseReactiveUI();
     }
 }

@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
     <Compile Update="**\*.xaml.cs">
@@ -12,8 +12,10 @@
     </AvaloniaResource>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="*" />
-    <PackageReference Include="Avalonia.Desktop" Version="*" />
+    <PackageReference Include="Avalonia" Version="0.10.0"/>
+    <PackageReference Include="Avalonia.Desktop" Version="0.10.0"/>
+    <PackageReference Include="Avalonia.Diagnostics" Version="0.10.0"/>
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.0"/>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\source\MaterialDesign.Avalonia.PackIcon\MaterialDesign.Avalonia.PackIcon.csproj" />
