@@ -19,7 +19,7 @@ jobs:
     
     - name: Create NuGet Package
       run: dotnet pack -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/AboimPinto/MaterialDesign.Avalonia/releases/tag/${{ github.event.release.tag_name }}"
-      working-directory: ./MaterialDesign.Avalonia
+      working-directory: ./MaterialDesign.Avalonia/packages
 
     - name: Archive NuGet Package
       uses: actions/upload-artifact@v2
