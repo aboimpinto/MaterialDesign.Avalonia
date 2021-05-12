@@ -1,8 +1,10 @@
 name: Release to Nuget
 
 on:
-  release:
-    types: [published]
+  push:
+    branches: [ master ]
+  # release:
+  #   types: [published]
 
 jobs:
   build:
@@ -18,7 +20,10 @@ jobs:
         dotnet-version: 5.0.104
     
     - name: Create NuGet Package
-      run: dotnet pack -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/AboimPinto/MaterialDesign.Avalonia/releases/tag/${{ github.event.release.tag_name }}"
+      run: dotnet pack 
+              -c Release 
+              /p:Version=${{ github.event.release.tag_name }} 
+              /p:PackageReleaseNotes="See https://github.com/AboimPinto/MaterialDesign.Avalonia/releases/tag/${{ github.event.release.tag_name }}"
 
     - name: Archive NuGet Package
       uses: actions/upload-artifact@v2
