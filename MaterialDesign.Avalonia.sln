@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "demo", "demo", "{15E30CF3-71F5-4D13-84BD-835F7706CC58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainDemo.Avalonia", "demo\MainDemo.Avalonia\MainDemo.Avalonia.csproj", "{1398A260-4C14-4246-8BE4-0F278294E2EA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainDemo.Avalonia", "demo\MvvmDemo.Avalonia\MvvmDemo.Avalonia.csproj", "{1398A260-4C14-4246-8BE4-0F278294E2EA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "source", "source", "{2A5CA40F-277A-42FB-9342-AC2924D951FF}"
 EndProject

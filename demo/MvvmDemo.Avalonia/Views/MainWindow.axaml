@@ -1,0 +1,25 @@
+<Window 
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vm="using:MvvmDemo.Avalonia.ViewModels"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:material="clr-namespace:MaterialDesign.Avalonia.PackIcon;assembly=MaterialDesign.Avalonia.PackIcon"
+    x:Class="MvvmDemo.Avalonia.Views.MainWindow"
+    Icon="/Assets/avalonia-logo.ico"
+    Title="MvvmDemo.Avalonia">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <material:PackIcon Kind="{Binding Icon}" Height="24" Width="24" HorizontalAlignment="Center" />
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Monitor Icon" Command="{Binding MonitorIconCommand}" />
+            <Button Content="None Icon" Command="{Binding NoneIconCommand}" />
+        </StackPanel>
+    </StackPanel>
+
+</Window>

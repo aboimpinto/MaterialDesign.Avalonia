@@ -5,6 +5,7 @@
     /// ******************************************
     public enum PackIconKind
     {
+        None,
         AbjadArabic,
         WritingSystemArabic=AbjadArabic,
         AbjadHebrew,
@@ -6714,7 +6715,6 @@
         NintendoWiiu,
         Nix,
         Nodejs,
-        None,
         Noodles,
         AsianNoodles=Noodles,
         FoodRamen=Noodles,
