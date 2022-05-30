@@ -22,3 +22,4 @@ Use the control where you want to show a Material Icon
 
 Look here, https://fonts.google.com/icons for the list of icons available.   
 If an icon is not available, please report.
+
