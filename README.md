@@ -1,6 +1,10 @@
 # MaterialDesign.Avalonia
 Convert the MaterialDesign WPF to Avalonia
 
+
+# Last release 05.2022
+* New icons added
+
 # Usage
 
 Add the nuget package to your project  
