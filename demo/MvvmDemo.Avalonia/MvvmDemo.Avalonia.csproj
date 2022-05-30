@@ -5,16 +5,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
-    <AvaloniaResource Include="Assets\**" />
+    <Folder Include="Models\"/>
+    <AvaloniaResource Include="Assets\**"/>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="0.10.14" />
-    <PackageReference Include="Avalonia.Desktop" Version="0.10.14" />
-    <PackageReference Include="Avalonia.Diagnostics" Version="0.10.14" />
-    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.14" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\source\MaterialDesign.Avalonia.PackIcon\MaterialDesign.Avalonia.PackIcon.csproj" />
+    <PackageReference Include="Avalonia" Version="0.10.14"/>
+    <PackageReference Include="Avalonia.Desktop" Version="0.10.14"/>
+    <PackageReference Include="Avalonia.Diagnostics" Version="0.10.14"/>
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.14"/>
+    <PackageReference Include="MaterialDesign.Avalonia.PackIcon" Version="1.25.0"/>
   </ItemGroup>
 </Project>
