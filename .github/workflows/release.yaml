@@ -47,7 +47,7 @@ jobs:
         # path: /home/runner/work/MaterialDesign.Avalonia/MaterialDesign.Avalonia/source/MaterialDesign.Avalonia.PackIcon/bin/Release/MaterialDesign.Avalonia.PackIcon.1.25.0.nupkg
 
     - name: Publish Nuget Package
-      run: dotnet nuget push /home/runner/work/MaterialDesign.Avalonia/MaterialDesign.Avalonia/source/MaterialDesign.Avalonia.PackIcon/bin/Release/MaterialDesign.Avalonia.PackIcon.${{  github.ref_name }}.nupkg
+      run: dotnet nuget push /home/runner/work/MaterialDesign.Avalonia/MaterialDesign.Avalonia/source/MaterialDesign.Avalonia.PackIcon/bin/Release/MaterialDesign.Avalonia.PackIcon.${{  github.ref_name }}.0.nupkg
               --api-key ${{ secrets.MATERIALDESIGN_AVALONIA_PACKICON_KEY }} 
               --source https://api.nuget.org/v3/index.json 
               --no-symbols true
