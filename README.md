@@ -2,7 +2,7 @@
 Convert the MaterialDesign WPF to Avalonia
 
 
-# Last release v1.33
+# Last release v1.34
 * Update to Avalonia 11
 
 
