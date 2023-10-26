@@ -3,6 +3,7 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <OutputType>Library</OutputType>
     <Nullable>enable</Nullable>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,6 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-      <None Include="../../README.md" Pack="true" PackagePath="\"/>
+      <None Include="README.md" Pack="true" PackagePath=""/>
   </ItemGroup>
 </Project>
