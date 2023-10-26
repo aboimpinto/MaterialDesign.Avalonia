@@ -42,7 +42,8 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: MaterialDesign.Avalonia.PackIcon
-        path: ./source/MaterialDesign.Avalonia.PackIcon/bin/Release/MaterialDesign.Avalonia.PackIcon.${{  github.ref_name }}.0.nupkg
+        path: /home/runner/work/MaterialDesign.Avalonia/MaterialDesign.Avalonia/source/MaterialDesign.Avalonia.PackIcon/bin/Release/MaterialDesign.Avalonia.PackIcon.${{  github.ref_name }}.0.nupkg
+        # path: ./source/MaterialDesign.Avalonia.PackIcon/bin/Release/MaterialDesign.Avalonia.PackIcon.${{  github.ref_name }}.0.nupkg
         # path: /home/runner/work/MaterialDesign.Avalonia/MaterialDesign.Avalonia/source/MaterialDesign.Avalonia.PackIcon/bin/Release/MaterialDesign.Avalonia.PackIcon.1.25.0.nupkg
 
     - name: Publish Nuget Package
