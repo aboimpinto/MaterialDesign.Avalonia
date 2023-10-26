@@ -2,9 +2,8 @@ name: Release to Nuget
 
 on:
   push:
-    branches: [ master ]
-  # release:
-  #   types: [published]
+    tags: 
+      - '**'
 
 jobs:
   build:
@@ -22,16 +21,17 @@ jobs:
 
 
 
-    # - name: Setup .NET Core
-    #   uses: actions/setup-dotnet@v2
-    #   with:
-    #     dotnet-version: 6.0.x
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 7.0.x
     
-    # - name: Create NuGet Package
-    #   run: dotnet pack -c Release 
-    #           /p:Version=1.25.0 
-    #           /p:PackageReleaseNotes="See https://github.com/AboimPinto/MaterialDesign.Avalonia/releases/tag/1.25.0"
-    #           # /p:PackageReleaseNotes="See https://github.com/AboimPinto/MaterialDesign.Avalonia/releases/tag/${{ github.event.release.tag_name }}"
+    - name: Create NuGet Package
+      run: dotnet pack -c Release 
+              /p:Version=${{ github.event.release.tag_name }} 
+              /p:PackageReleaseNotes="See https://github.com/AboimPinto/MaterialDesign.Avalonia/releases/tag/${{ github.event.release.tag_name }}"
+              # /p:Version=1.25.0 
+              # /p:PackageReleaseNotes="See https://github.com/AboimPinto/MaterialDesign.Avalonia/releases/tag/1.25.0"
 
     # - name: Archive NuGet Package
     #   uses: actions/upload-artifact@v3
