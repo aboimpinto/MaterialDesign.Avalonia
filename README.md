@@ -2,8 +2,9 @@
 Convert the MaterialDesign WPF to Avalonia
 
 
-# Last release 05.2022
-* New icons added
+# Last release v1.33
+* Update to Avalonia 11
+
 
 # Usage
 
