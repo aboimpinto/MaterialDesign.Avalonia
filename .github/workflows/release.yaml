@@ -4,27 +4,14 @@ on:
   push:
     tags: 
       - '**'
-
+      
 jobs:
   build:
 
     runs-on: ubuntu-latest
 
     steps:
-    - name: GitHub Tag Name example
-      run: |
-        echo "Tag name from GITHUB_REF_NAME: $GITHUB_REF_NAME"
-        echo "Tag name from github.ref_name: ${{  github.ref_name }}"
-
     - uses: actions/checkout@v2
-
-    # - uses: nuget/setup-nuget@v1
-    #   with:
-    #     nuget-api-key: ${{ secrets.MATERIALDESIGN_AVALONIA_PACKICON_KEY }} 
-    #     nuget-version: '5.x'
-    # - run: nuget restore ./source/MaterialDesign.Avalonia.PackIcon/MaterialDesign.Avalonia.PackIcon.csproj
-
-
 
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v2
@@ -35,20 +22,15 @@ jobs:
       run: dotnet pack -c Release 
               /p:Version=${{  github.ref_name }}
               /p:PackageReleaseNotes="See https://github.com/AboimPinto/MaterialDesign.Avalonia/releases/tag/${{  github.ref_name }}"
-              # /p:Version=1.25.0 
-              # /p:PackageReleaseNotes="See https://github.com/AboimPinto/MaterialDesign.Avalonia/releases/tag/1.25.0"
 
     - name: Archive NuGet Package
       uses: actions/upload-artifact@v3
       with:
         name: MaterialDesign.Avalonia.PackIcon
         path: /home/runner/work/MaterialDesign.Avalonia/MaterialDesign.Avalonia/source/MaterialDesign.Avalonia.PackIcon/bin/Release/MaterialDesign.Avalonia.PackIcon.${{  github.ref_name }}.0.nupkg
-        # path: ./source/MaterialDesign.Avalonia.PackIcon/bin/Release/MaterialDesign.Avalonia.PackIcon.${{  github.ref_name }}.0.nupkg
-        # path: /home/runner/work/MaterialDesign.Avalonia/MaterialDesign.Avalonia/source/MaterialDesign.Avalonia.PackIcon/bin/Release/MaterialDesign.Avalonia.PackIcon.1.25.0.nupkg
 
     - name: Publish Nuget Package
       run: dotnet nuget push /home/runner/work/MaterialDesign.Avalonia/MaterialDesign.Avalonia/source/MaterialDesign.Avalonia.PackIcon/bin/Release/MaterialDesign.Avalonia.PackIcon.${{  github.ref_name }}.0.nupkg
               --api-key ${{ secrets.MATERIALDESIGN_AVALONIA_PACKICON_KEY }} 
               --source https://api.nuget.org/v3/index.json 
               --no-symbols true
-              # run: dotnet nuget push /home/runner/work/MaterialDesign.Avalonia/MaterialDesign.Avalonia/source/MaterialDesign.Avalonia.PackIcon/bin/Release/MaterialDesign.Avalonia.PackIcon.1.25.0.nupkg
