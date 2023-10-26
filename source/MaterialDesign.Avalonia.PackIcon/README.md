@@ -10,7 +10,7 @@ Convert the MaterialDesign WPF to Avalonia
 Add the nuget package to your project  
 ```Install-Package MaterialDesign.Avalonia.PackIcon ```
 
-Include the Style in your code (Aspp.axaml for example)  
+Include the Style in your code (App.axaml for example)  
 ```<StyleInclude Source="avares://MaterialDesign.Avalonia.PackIcon/Assets/Generic.xaml" />```
 
 
